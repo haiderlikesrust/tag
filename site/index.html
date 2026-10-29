@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hypertag: Long or short any $cashtag on X</title>
+  <meta name="description" content="Hypertag is a Chrome extension that adds Long and Short buttons to every $cashtag on X, powered by Hyperliquid. Live prices, one-tap orders and your positions, right in your feed.">
+  <link rel="canonical" href="https://hypertag.trade/">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hypertag.trade/">
+  <meta property="og:title" content="Hypertag: Trade the timeline">
+  <meta property="og:description" content="Long or short any $cashtag on X with Hyperliquid, without leaving your feed.">
+  <meta property="og:image" content="https://hypertag.trade/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hypertag: Trade the timeline">
+  <meta name="twitter:description" content="Long or short any $cashtag on X with Hyperliquid, without leaving your feed.">
+  <meta name="twitter:image" content="https://hypertag.trade/assets/og.jpg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-pill">
+      <a class="brand" href="#top" aria-label="Hypertag home">
+        <img src="/assets/logo.png" width="30" height="30" alt="">
+        <span>Hypertag</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <span class="nav-blob" aria-hidden="true"></span>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-mint btn-sm nav-cta" data-cta href="#get">Add to Chrome</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Trade the <span class="mint">timeline.</span></h1>
+          <p class="lead">Hypertag puts <strong>Long</strong> and <strong>Short</strong> under every $cashtag on X. Live prices, one-tap orders and your open positions, right in your feed.</p>
+          <div class="cta-row">
+            <a class="btn btn-mint btn-lg" data-cta href="#get">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Add to Chrome, it's free
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Can't withdraw your funds</li>
+            <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No gas to connect</li>
+            <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No extra fees</li>
+          </ul>
+        </div>
+
+        <div class="demo" role="img" aria-label="Preview: a post on X mentioning $HYPE shows a live price chip with Long and Short buttons. Tapping Long opens a trade sheet and the order fills.">
+          <article class="post">
+            <div class="post-head">
+              <span class="avatar" aria-hidden="true"></span>
+              <div class="who"><b>Mona</b> <span>@monatrades · 2m</span></div>
+            </div>
+            <p class="post-text"><span class="tag">$HYPE</span> just broke the range on volume. Not fading this one.</p>
+            <div class="chip" id="demo-chip">
+              <span class="chip-coin"><b>$HYPE</b> <span class="num" data-px>$46.81</span> <span class="up num">+6.31%</span>
+                <span class="chip-pos num" data-pos hidden>Long +$0.00</span></span>
+              <span class="pill pill-long" data-long>Long</span>
+              <span class="pill pill-short">Short</span>
+            </div>
+            <div class="post-actions">
+              <span><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 11.5a7.5 7 0 0 1 7.5-7h1a7.5 7 0 0 1 0 15H9l-4 3v-4.3A7 7 0 0 1 4 11.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>48</span>
+              <span><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 7h10l-2.5-2.5M17 17H7l2.5 2.5M4 14V9a2 2 0 0 1 2-2M20 10v5a2 2 0 0 1-2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>212</span>
+              <span><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>1.4K</span>
+              <span><svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 20V12M10 20V6M15 20v-9M20 20V9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>88K</span>
+            </div>
+          </article>
+
+          <div class="sheet" id="demo-sheet" aria-hidden="true">
+            <div class="sheet-head"><span class="x">×</span><b>Trade</b></div>
+            <div class="sheet-tabs"><span class="on">Market</span><span>Limit</span></div>
+            <div class="sheet-body">
+              <div class="sheet-mkt"><b>HYPE-USD <span class="tag-s">PERP</span></b><b class="num" data-px>$46.81</b></div>
+              <div class="seg"><span class="on">Long</span><span>Short</span></div>
+              <div class="field"><small>Size</small><span class="num">250</span><em>USD</em></div>
+              <div class="lev"><span>Leverage</span><b>5x</b></div>
+              <div class="track"><i></i></div>
+              <div class="submit" data-submit><span>Long HYPE</span><i class="spin"></i></div>
+            </div>
+          </div>
+
+          <div class="toast" id="demo-toast">Bought 5.34 HYPE at $46.82</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wallets strip -->
+    <section class="strip" aria-label="Supported wallets">
+      <div class="wrap strip-inner">
+        <span class="strip-label">Connect with</span>
+        <ul>
+          <li>MetaMask</li><li>Rabby</li><li>Coinbase Wallet</li><li>OKX Wallet</li><li>Phantom</li><li>Any EIP-6963 wallet</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <p class="kicker">How it works</p>
+        <h2>From post to position in seconds.</h2>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-n">01</span>
+            <h3>Add Hypertag to Chrome</h3>
+            <p>Open x.com. Every $cashtag listed on Hyperliquid now shows a live price with Long and Short buttons.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-n">02</span>
+            <h3>Connect with one signature</h3>
+            <p>Your wallet approves a trading-only key. No gas, no transaction, and nothing to deposit with us.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-n">03</span>
+            <h3>Long or short from any post</h3>
+            <p>Pick a size and leverage, add a take profit or stop loss if you want, and confirm. The order goes straight to Hyperliquid.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <p class="kicker">Features</p>
+        <h2>Everything you need. Nothing you have to tab out for.</h2>
+
+        <div class="bento">
+          <div class="card card-wide reveal">
+            <div>
+              <h3>Every $cashtag becomes a trade button</h3>
+              <p>Live price and 24h change under the post, plus your PnL if you already hold the coin. It follows your X display setting (Lights out, Dim or Default) and your accent color.</p>
+            </div>
+            <div class="themes">
+              <div class="theme t-dark"><small>Lights out</small>
+                <span class="mini-chip"><b>$BTC</b> <span class="num">$81,662</span> <span class="up num">+1.40%</span><span class="pill pill-long">Long</span><span class="pill pill-short">Short</span></span></div>
+              <div class="theme t-dim"><small>Dim</small>
+                <span class="mini-chip"><b>$ETH</b> <span class="num">$3,913.9</span> <span class="down num">-1.91%</span><span class="pill pill-long">Long</span><span class="pill pill-short">Short</span></span></div>
+              <div class="theme t-light"><small>Default</small>
+                <span class="mini-chip"><b>$SOL</b> <span class="num">$187.42</span> <span class="up num">+4.22%</span><span class="pill pill-long">Long</span><span class="pill pill-short">Short</span></span></div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>A real trade sheet</h3>
+            <p>Not just a buy button. Everything you'd set on the exchange, in a sheet that looks like X.</p>
+            <ul class="tags">
+              <li>Market</li><li>Limit</li><li>Cross</li><li>Isolated</li><li>Take profit</li><li>Stop loss</li><li>Leverage slider</li><li>Fee preview</li>
+            </ul>
+          </div>
+
+          <div class="card card-tall reveal">
+            <h3>Positions in your sidebar</h3>
+            <p>Account value, PnL and every open position sit next to your feed, each with a one-tap close.</p>
+            <div class="side-mock">
+              <div class="sm-head"><b>Hyperliquid</b><span>0x8a1C…9a0B</span></div>
+              <small>Account value</small>
+              <div class="sm-value num">$12,450.32</div>
+              <div class="sm-row"><b>BTC</b><span class="tag-long">Long 5x</span><span class="up num">+$412.18</span></div>
+              <div class="sm-row"><b>SOL</b><span class="tag-short">Short 10x</span><span class="down num">-$38.40</span></div>
+              <div class="sm-row"><b>HYPE</b><span class="tag-long">Long 3x</span><span class="up num">+$61.07</span></div>
+              <div class="sm-foot">Open Hyperliquid</div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Every Hyperliquid perp</h3>
+            <p>BTC, ETH, SOL, HYPE and the rest. Meme tickers map automatically, so <span class="mono">$PEPE</span> on X trades <span class="mono">kPEPE</span> on Hyperliquid.</p>
+            <ul class="coins" aria-label="Example markets">
+              <li>BTC</li><li>ETH</li><li>SOL</li><li>HYPE</li><li>kPEPE</li><li>DOGE</li><li>SUI</li><li>+ more</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Practice on testnet</h3>
+            <p>Flip to Hyperliquid Testnet in the popup and try every flow with play money before going live.</p>
+            <div class="net-toggle" aria-hidden="true"><span>Mainnet</span><span class="on">Testnet</span></div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Zero tab-switching</h3>
+            <p>No hunting for the ticker or re-typing the coin on another site. The market comes from the post you're reading.</p>
+            <div class="flow" aria-hidden="true"><span>Post</span><i></i><span>Tap</span><i></i><span class="mint">Filled</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section class="section" id="security">
+      <div class="wrap sec-grid">
+        <div>
+          <p class="kicker">Security</p>
+          <h2>Built so it can't touch your funds.</h2>
+          <ul class="sec-list">
+            <li class="reveal"><h3>Trading-only key</h3><p>Hypertag uses a Hyperliquid API wallet. It can open and close positions. Hyperliquid itself blocks it from withdrawing or transferring anything.</p></li>
+            <li class="reveal"><h3>Your key never touches x.com</h3><p>The key is created and stored inside the extension, and every order is signed there. The X page never sees it.</p></li>
+            <li class="reveal"><h3>Revoke anytime</h3><p>Disconnect in one click, or remove the key from your Hyperliquid account settings whenever you like.</p></li>
+            <li class="reveal"><h3>Verified signing</h3><p>Order signing is tested byte-for-byte against Hyperliquid's official SDK.</p></li>
+          </ul>
+        </div>
+        <div class="perm reveal" aria-label="What the Hypertag API wallet can and can't do">
+          <div class="perm-head">
+            <img src="/assets/logo.png" width="44" height="44" alt="">
+            <div><b>Hypertag API wallet</b><small>Approved on Hyperliquid</small></div>
+          </div>
+          <ul>
+            <li><span>Open positions</span><i class="ok">Allowed</i></li>
+            <li><span>Close positions</span><i class="ok">Allowed</i></li>
+            <li><span>Set leverage, TP and SL</span><i class="ok">Allowed</i></li>
+            <li><span>Withdraw funds</span><i class="no">Blocked</i></li>
+            <li><span>Transfer funds</span><i class="no">Blocked</i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq-wrap">
+        <p class="kicker">FAQ</p>
+        <h2>Questions, answered.</h2>
+        <div class="faq">
+          <details>
+            <summary>Is Hypertag made by X or Hyperliquid?</summary>
+            <p>No. Hypertag is an independent tool. It works on x.com and talks to Hyperliquid's public API, but it isn't affiliated with or endorsed by either.</p>
+          </details>
+          <details>
+            <summary>Can Hypertag move or withdraw my money?</summary>
+            <p>No. It only holds a Hyperliquid API wallet, which can place and close orders but can't withdraw or transfer. That limit is enforced by Hyperliquid, not just by Hypertag.</p>
+          </details>
+          <details>
+            <summary>What does it cost?</summary>
+            <p>Nothing. Hypertag adds no fees of its own. You pay Hyperliquid's normal trading fees, exactly as you would on their site.</p>
+          </details>
+          <details>
+            <summary>Which wallets can I connect?</summary>
+            <p>Any browser EVM wallet, including MetaMask, Rabby, Coinbase Wallet, OKX Wallet and Phantom. You can also paste an API wallet key you created on Hyperliquid instead.</p>
+          </details>
+          <details>
+            <summary>Which markets can I trade?</summary>
+            <p>All of Hyperliquid's main perpetual markets. Spot and builder-deployed markets aren't supported yet.</p>
+          </details>
+          <details>
+            <summary>Can I try it without real money?</summary>
+            <p>Yes. Switch to Testnet in the extension popup and use Hyperliquid's testnet funds.</p>
+          </details>
+          <details>
+            <summary>Which browsers does it work in?</summary>
+            <p>Chrome and other Chromium browsers such as Brave, Arc and Edge, on desktop.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final" id="get">
+      <div class="wrap final-inner reveal">
+        <img class="final-logo" src="/assets/logo.png" width="96" height="96" alt="">
+        <h2>Your timeline, now tradable.</h2>
+        <p>Free to install. Connected in under a minute.</p>
+        <a class="btn btn-mint btn-lg" data-cta href="#get">Add Hypertag to Chrome</a>
+        <p class="store-note" data-store-note>Coming soon to the Chrome Web Store.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" width="28" height="28" alt="">
+        <b>Hypertag</b>
+        <span>hypertag.trade</span>
+      </div>
+      <p class="legal">Hypertag is an independent tool and is not affiliated with, endorsed by or sponsored by X Corp. or Hyperliquid. Trading perpetual futures with leverage is high risk and can result in losing more than you expect. Nothing on this site is financial advice.</p>
+      <p class="copy">© <span data-year>2026</span> Hypertag</p>
+    </div>
+  </footer>
+</body>
+</html>
