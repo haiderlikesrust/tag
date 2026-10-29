@@ -6,6 +6,13 @@ const CHROME_STORE_URL = '';
 
 document.documentElement.classList.add('js');
 
+const alertBar = document.querySelector('[data-alert]');
+if (alertBar) {
+  const syncAlert = () => document.documentElement.style.setProperty('--alert-h', `${alertBar.offsetHeight}px`);
+  syncAlert();
+  addEventListener('resize', syncAlert);
+}
+
 const ctas = document.querySelectorAll('[data-cta]');
 if (CHROME_STORE_URL) {
   for (const a of [...ctas, ...document.querySelectorAll('[data-download]')]) {

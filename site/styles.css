@@ -19,7 +19,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 100px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--alert-h, 0px) + 100px); -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--text);
   font: 17px/1.55 var(--font); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
@@ -52,8 +52,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn-ghost { border: 1px solid var(--border); color: var(--text); }
 .btn-ghost:hover { background: rgba(231, 233, 234, .06); border-color: #536471; }
 
+/* ---------- alert bar ---------- */
+.alert-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; justify-content: center;
+  padding: 10px 16px; background: #f4212e; color: #fff; font-size: 14px; font-weight: 600; line-height: 1.4; text-align: center;
+  box-shadow: 0 6px 24px -8px rgba(244, 33, 46, .6);
+}
+.alert-bar span { max-width: 980px; }
+.alert-bar strong { font-weight: 800; letter-spacing: .06em; margin-right: 4px; }
+
 /* ---------- nav: floating glass pill with a liquid highlight ---------- */
-.nav { position: fixed; top: 14px; left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 0 16px; pointer-events: none; }
+.nav { position: fixed; top: calc(var(--alert-h, 0px) + 14px); left: 0; right: 0; z-index: 50; display: flex; justify-content: center; padding: 0 16px; pointer-events: none; }
 .nav-pill {
   position: relative; display: flex; align-items: center; gap: 6px; height: 58px; padding: 0 7px 0 12px;
   border-radius: 999px; pointer-events: auto;
@@ -86,7 +95,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav.scrolled .nav-cta { height: 40px; }
 
 /* ---------- hero ---------- */
-.hero { position: relative; padding: 156px 0 96px; overflow: hidden; }
+.hero { position: relative; padding: calc(var(--alert-h, 0px) + 156px) 0 96px; overflow: hidden; }
 .hero::before {
   content: ''; position: absolute; inset: -20% -10% auto auto; width: 900px; height: 900px; pointer-events: none;
   background: radial-gradient(closest-side, rgba(121, 247, 227, .16), rgba(121, 247, 227, 0) 70%);
@@ -324,7 +333,7 @@ h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.01e
 .copy { color: var(--dim); font-size: 13px; white-space: nowrap; }
 
 /* ---------- document pages (privacy) ---------- */
-.doc { padding: 150px 0 100px; }
+.doc { padding: calc(var(--alert-h, 0px) + 150px) 0 100px; }
 .doc-inner { max-width: 760px; }
 .doc h1 { font-size: clamp(42px, 6vw, 68px); }
 .doc-meta { margin-top: 14px; color: var(--dim); font-size: 15px; }
@@ -347,7 +356,7 @@ h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.01e
 
 /* ---------- responsive ---------- */
 @media (max-width: 1020px) {
-  .hero { padding: 120px 0 72px; }
+  .hero { padding: calc(var(--alert-h, 0px) + 120px) 0 72px; }
   .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .demo { max-width: 560px; width: 100%; margin: 0 auto; }
   .card-wide { grid-template-columns: 1fr; }
@@ -370,7 +379,7 @@ h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.01e
   .btn-lg { width: 100%; }
   .section { padding-top: 88px; }
   .final { margin-top: 100px; padding: 80px 0; }
-  .doc { padding: 120px 0 72px; }
+  .doc { padding: calc(var(--alert-h, 0px) + 120px) 0 72px; }
   .install-steps { grid-template-columns: 1fr; margin-top: 40px; }
   .tldr { padding: 20px; }
   .demo { min-height: 500px; }
