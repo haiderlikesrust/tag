@@ -40,14 +40,14 @@
     <article class="wrap doc-inner">
       <p class="kicker">Legal</p>
       <h1>Privacy Policy</h1>
-      <p class="doc-meta">Effective October 29, 2026</p>
+      <p class="doc-meta">Updated October 29, 2026</p>
 
       <div class="tldr">
         <h2>The short version</h2>
         <ul>
-          <li>Hypertag has no accounts, no analytics, no ads and no servers of its own that receive your data.</li>
+          <li>Hypertag has no accounts, no analytics and no ads. Its only server is the optional AI explanation service, which you turn on yourself and which never receives wallet or account data.</li>
           <li>Your trading key and settings stay in your browser.</li>
-          <li>The only service Hypertag sends data to is Hyperliquid, to show your account and to place the orders you confirm.</li>
+          <li>Apart from that optional AI feature, the only service Hypertag sends data to is Hyperliquid, to show your account and to place the orders you confirm.</li>
         </ul>
       </div>
 
@@ -73,7 +73,12 @@
       <p>Hyperliquid handles this information under its own terms and privacy practices. Trading activity on Hyperliquid is recorded on its public blockchain and can be seen by anyone.</p>
 
       <h2>Information read on x.com</h2>
-      <p>To find $cashtags, the extension reads the text of posts shown on your screen on x.com and twitter.com, and the page's colors to match your theme. This happens on your device. Post text is not stored and is not sent anywhere. The extension does not read your direct messages, your X account details, or pages on any other website.</p>
+      <p>To find $cashtags, the extension reads the text of posts shown on your screen on x.com and twitter.com, and the page's colors to match your theme. This happens on your device. Post text is not stored, and it is only sent anywhere if you use the optional AI explanations described below. The extension does not read your direct messages, your X account details, or pages on any other website.</p>
+
+      <h2>Optional AI explanations</h2>
+      <p>"Why is it moving?" in the cashtag card is off until you turn it on. When you use it, the extension sends Hypertag's AI service (hypertag.trade) the coin you asked about and up to 8 public posts on your screen that mention it: each post's author handle, link, time and text. Links and wallet or contract addresses are removed from post text before it reaches the AI model.</p>
+      <p>Our server adds public market data from Hyperliquid and sends it, with those posts, to an AI model through OpenRouter, which passes it to the model's provider to write the explanation. They handle it under their own terms and privacy policies.</p>
+      <p>The AI service never receives your wallet address, keys, balances, positions or orders. We keep explanations in memory for a few minutes so repeat questions don't cost extra, and we don't store what you sent. Our server may keep standard access logs (IP address and time) for security and rate limiting. Turn the feature off any time in the extension popup. AI explanations can be wrong and are not financial advice.</p>
 
       <h2>Your browser wallet</h2>
       <p>Only when you click Connect, the extension asks your browser wallet (for example MetaMask or Rabby) for your address, its current network, and one signature approving the trading key. It never asks your wallet to send a transaction or move funds.</p>
@@ -82,7 +87,7 @@
       <ul>
         <li>Sell, rent or share your data with anyone.</li>
         <li>Use analytics, tracking pixels, fingerprinting or advertising.</li>
-        <li>Send your data anywhere other than Hyperliquid as described above.</li>
+        <li>Send your data anywhere other than Hyperliquid and, if you turn it on, the AI service, as described above.</li>
         <li>Use your data to determine creditworthiness or for lending.</li>
         <li>Use your data for any purpose other than the extension's single purpose: trading on Hyperliquid from X.</li>
       </ul>

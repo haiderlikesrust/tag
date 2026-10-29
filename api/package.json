@@ -1,0 +1,12 @@
+{
+  "name": "hypertag-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hypertag AI service: explains recent price moves using Hyperliquid data and OpenRouter.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "MOCK_LLM=1 node server.mjs"
+  }
+}
