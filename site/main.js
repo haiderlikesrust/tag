@@ -1,18 +1,17 @@
 // hypertag.trade — CTA wiring, nav state, scroll reveals and the hero demo loop.
 
-// Paste the Chrome Web Store listing URL here once the extension is published.
-// While it is empty, every "Add to Chrome" button scrolls to the final section.
+// Paste the Chrome Web Store listing URL here once the extension is approved.
+// Until then, every "Add to Chrome" button opens the install guide on GitHub.
 const CHROME_STORE_URL = '';
+const GITHUB_INSTALL_URL = 'https://github.com/hypertagcoin/hypertag#install';
 
 document.documentElement.classList.add('js');
 
 const ctas = document.querySelectorAll('[data-cta]');
-if (CHROME_STORE_URL) {
-  for (const a of ctas) {
-    a.href = CHROME_STORE_URL;
-    a.target = '_blank';
-    a.rel = 'noopener';
-  }
+for (const a of ctas) {
+  a.href = CHROME_STORE_URL || GITHUB_INSTALL_URL;
+  a.target = '_blank';
+  a.rel = 'noopener';
 }
 const storeNote = document.querySelector('[data-store-note]');
 if (storeNote) storeNote.hidden = !!CHROME_STORE_URL;
