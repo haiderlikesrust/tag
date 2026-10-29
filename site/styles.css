@@ -116,6 +116,18 @@ h1 { font-size: clamp(52px, 7.6vw, 96px); line-height: .95; font-weight: 800; le
 .trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; font-size: 14px; color: var(--muted); }
 .trust li { display: flex; align-items: center; gap: 7px; }
 .trust svg { color: var(--mint); }
+.ca {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px 12px; max-width: 520px; margin-top: 24px; padding: 10px 12px 12px 14px;
+  border: 1px solid rgba(121, 247, 227, .35); border-radius: 14px; background: rgba(121, 247, 227, .06);
+}
+.ca-label { color: var(--mint); font-size: 13px; font-weight: 800; letter-spacing: .04em; white-space: nowrap; }
+.ca-addr { grid-column: 1 / -1; grid-row: 2; min-width: 0; color: var(--text); font: 600 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+.ca-actions { display: flex; align-items: center; gap: 8px; }
+.ca .copy-btn { margin: 0; padding: 4px 12px; font-size: 13px; }
+.ca-chart { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.ca-chart:hover { color: var(--text); }
+.footer-ca { grid-column: 1 / -1; }
+.footer-ca code { color: var(--text); font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
 
 /* ---------- hero demo (mirrors the extension UI) ---------- */
 .demo { position: relative; min-height: 470px; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px; }
