@@ -1,10 +1,15 @@
 # hypertag.trade static site: nginx as a non-root user on port 4973.
-# Dokploy: Build Type "Dockerfile", Dockerfile path site/Dockerfile,
-# Docker context path site, and set the domain's container port to 4973.
+# Dokploy: Build Type "Dockerfile", build path /site (Dockerfile "Dockerfile",
+# context left empty), and set the domain's container port to 4973.
 FROM nginxinc/nginx-unprivileged:stable-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY . /usr/share/nginx/html
+
+# nginx.conf has to be in the build context for the COPY above; don't also serve it.
+USER root
+RUN rm -f /usr/share/nginx/html/nginx.conf
+USER 101
 
 EXPOSE 4973
 

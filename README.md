@@ -91,7 +91,7 @@ Then open `http://localhost:4973`.
 The site ships as a small nginx container that runs as a non-root user and listens on **port 4973**.
 
 1. Push this repo to GitHub or GitLab, then create an **Application** in Dokploy from it.
-2. Set **Build Type** to Dockerfile, the Dockerfile path to `site/Dockerfile`, and the Docker context path to `site`.
+2. Set the build path to `/site` and **Build Type** to Dockerfile (Dockerfile `Dockerfile`, context left empty). Add `site/**` as a watch path so only site changes redeploy.
 3. Under **Domains**, add `hypertag.trade` with container port **4973**. Turn on HTTPS (Let's Encrypt).
 4. Point the domain's DNS A record at your Dokploy server's IP, then click **Deploy**.
 
