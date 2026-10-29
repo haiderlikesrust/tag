@@ -1,20 +1,34 @@
 // hypertag.trade — CTA wiring, nav state, scroll reveals and the hero demo loop.
 
 // Paste the Chrome Web Store listing URL here once the extension is approved.
-// Until then, every "Add to Chrome" button opens the install guide on GitHub.
+// Until then, "Add to Chrome" buttons scroll to the manual install steps.
 const CHROME_STORE_URL = '';
-const GITHUB_INSTALL_URL = 'https://github.com/hypertagcoin/hypertag#install';
 
 document.documentElement.classList.add('js');
 
 const ctas = document.querySelectorAll('[data-cta]');
-for (const a of ctas) {
-  a.href = CHROME_STORE_URL || GITHUB_INSTALL_URL;
-  a.target = '_blank';
-  a.rel = 'noopener';
+if (CHROME_STORE_URL) {
+  for (const a of [...ctas, ...document.querySelectorAll('[data-download]')]) {
+    a.href = CHROME_STORE_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+  const label = document.querySelector('[data-download] span');
+  if (label) label.textContent = 'Add to Chrome';
+  document.querySelectorAll('[data-manual]').forEach((el) => (el.hidden = true));
 }
-const storeNote = document.querySelector('[data-store-note]');
-if (storeNote) storeNote.hidden = !!CHROME_STORE_URL;
+
+for (const btn of document.querySelectorAll('[data-copy]')) {
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      btn.textContent = 'Copied';
+    } catch {
+      btn.textContent = 'Select & copy';
+    }
+    setTimeout(() => (btn.textContent = 'Copy'), 1600);
+  });
+}
 
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
@@ -54,7 +68,7 @@ if ('IntersectionObserver' in window) {
   const spy = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) setActive(byId.get(e.target.id) || null);
   }, { rootMargin: '-45% 0px -50% 0px' });
-  for (const id of [...byId.keys(), 'top', 'get']) {
+  for (const id of [...byId.keys(), 'top']) {
     const el = document.getElementById(id);
     if (el) spy.observe(el);
   }

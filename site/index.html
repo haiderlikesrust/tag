@@ -17,6 +17,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hypertagtrade">
   <meta name="twitter:title" content="Hypertag: Trade the timeline">
   <meta name="twitter:description" content="Long or short any $cashtag on X with Hyperliquid, without leaving your feed.">
   <meta name="twitter:image" content="https://hypertag.trade/assets/og.jpg">
@@ -38,8 +39,9 @@
         <a href="#features">Features</a>
         <a href="#security">Security</a>
         <a href="#faq">FAQ</a>
+        <a href="#install">Install</a>
       </nav>
-      <a class="btn btn-mint btn-sm nav-cta" data-cta href="#get">Add to Chrome</a>
+      <a class="btn btn-mint btn-sm nav-cta" data-cta href="#install">Add to Chrome</a>
     </div>
   </header>
 
@@ -51,7 +53,7 @@
           <h1>Trade the <span class="mint">timeline.</span></h1>
           <p class="lead">Hypertag puts <strong>Long</strong> and <strong>Short</strong> under every $cashtag on X. Live prices, one-tap orders and your open positions, right in your feed.</p>
           <div class="cta-row">
-            <a class="btn btn-mint btn-lg" data-cta href="#get">
+            <a class="btn btn-mint btn-lg" data-cta href="#install">
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Add to Chrome, it's free
             </a>
@@ -276,14 +278,44 @@
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final" id="get">
+    <!-- Install -->
+    <section class="final" id="install">
       <div class="wrap final-inner reveal">
         <img class="final-logo" src="/assets/logo.png" width="96" height="96" alt="">
         <h2>Your timeline, now tradable.</h2>
-        <p>Free to install. Connected in under a minute.</p>
-        <a class="btn btn-mint btn-lg" data-cta href="#get">Add Hypertag to Chrome</a>
-        <p class="store-note" data-store-note>Free and open source. While the Chrome Web Store review finishes, it installs from GitHub in about a minute.</p>
+        <p class="final-sub">Free and open source. Installs in about a minute.</p>
+        <div class="cta-row cta-center">
+          <a class="btn btn-mint btn-lg" data-download href="https://github.com/hypertagcoin/hypertag/releases/latest" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Download from GitHub</span>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/hypertagcoin/hypertag" target="_blank" rel="noopener">View source</a>
+        </div>
+
+        <ol class="install-steps" data-manual>
+          <li>
+            <span class="step-n">01</span>
+            <h3>Download</h3>
+            <p>Get <code>hypertag-x.y.z.zip</code> from the <a href="https://github.com/hypertagcoin/hypertag/releases/latest" target="_blank" rel="noopener">latest release</a> and unzip it into a folder you'll keep.</p>
+          </li>
+          <li>
+            <span class="step-n">02</span>
+            <h3>Open extensions</h3>
+            <p>Paste <code>chrome://extensions</code> <button type="button" class="copy-btn" data-copy="chrome://extensions">Copy</button> into the address bar and turn on <strong>Developer mode</strong> (top right).</p>
+          </li>
+          <li>
+            <span class="step-n">03</span>
+            <h3>Load unpacked</h3>
+            <p>Click <strong>Load unpacked</strong> and choose the unzipped folder, the one that contains <code>manifest.json</code>.</p>
+          </li>
+          <li>
+            <span class="step-n">04</span>
+            <h3>Refresh X</h3>
+            <p>Reload x.com. Long and Short appear under every $cashtag. Click <strong>Connect</strong> in the sidebar card to link Hyperliquid.</p>
+          </li>
+        </ol>
+        <p class="store-note" data-manual>The Chrome Web Store listing is in review. To update a manual install, download the new release, replace the folder and click ↻ on Hypertag in <code>chrome://extensions</code>.</p>
+        <p class="follow">Follow <a href="https://x.com/hypertagtrade" target="_blank" rel="noopener">@hypertagtrade</a> on X for updates.</p>
       </div>
     </section>
   </main>
@@ -295,6 +327,7 @@
         <b>Hypertag</b>
         <a href="/privacy">Privacy</a>
         <a href="https://github.com/hypertagcoin/hypertag" rel="noopener">GitHub</a>
+        <a href="https://x.com/hypertagtrade" rel="noopener">@hypertagtrade</a>
       </div>
       <p class="legal">Hypertag is an independent tool and is not affiliated with, endorsed by or sponsored by X Corp. or Hyperliquid. Trading perpetual futures with leverage is high risk and can result in losing more than you expect. Nothing on this site is financial advice.</p>
       <p class="copy">© <span data-year>2026</span> Hypertag</p>
