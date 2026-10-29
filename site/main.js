@@ -99,7 +99,9 @@ function render() {
   }
 }
 
-if (reduceMotion) {
+if (!sheet) {
+  // Not the home page (e.g. /privacy): no demo to run.
+} else if (reduceMotion) {
   sheet.classList.add('open');
 } else {
   setInterval(() => {

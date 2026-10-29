@@ -302,9 +302,29 @@ h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.01e
 .footer-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: start; }
 .footer-brand { display: flex; align-items: center; gap: 10px; }
 .footer-brand img { border-radius: 7px; }
-.footer-brand span { color: var(--dim); font-size: 14px; }
+.footer-brand span, .footer-brand a { color: var(--dim); font-size: 14px; }
+.footer-brand a { margin-left: 8px; transition: color .2s; }
+.footer-brand a:hover { color: var(--text); }
 .legal { max-width: 620px; color: var(--dim); font-size: 13px; line-height: 1.55; }
 .copy { color: var(--dim); font-size: 13px; white-space: nowrap; }
+
+/* ---------- document pages (privacy) ---------- */
+.doc { padding: 150px 0 100px; }
+.doc-inner { max-width: 760px; }
+.doc h1 { font-size: clamp(42px, 6vw, 68px); }
+.doc-meta { margin-top: 14px; color: var(--dim); font-size: 15px; }
+.doc h2 { margin-top: 48px; font-size: 24px; line-height: 1.25; font-weight: 800; letter-spacing: -.02em; }
+.doc p, .doc li { color: var(--muted); font-size: 17px; line-height: 1.65; }
+.doc p { margin-top: 14px; }
+.doc ul { margin-top: 14px; padding-left: 22px; list-style: disc; }
+.doc li { margin-top: 8px; }
+.doc li::marker { color: var(--mint); }
+.doc strong { color: var(--text); }
+.doc a { color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
+.tldr { margin-top: 36px; padding: 24px 28px; border: 1px solid rgba(121, 247, 227, .3); border-radius: var(--radius); background: rgba(121, 247, 227, .05); }
+.tldr h2 { margin-top: 0; font-size: 19px; }
+.tldr ul { margin-top: 10px; }
+.tldr li { color: var(--text); }
 
 /* ---------- scroll reveal (only when JS runs) ---------- */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
@@ -334,6 +354,8 @@ h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.01e
   .btn-lg { width: 100%; }
   .section { padding-top: 88px; }
   .final { margin-top: 100px; padding: 80px 0; }
+  .doc { padding: 120px 0 72px; }
+  .tldr { padding: 20px; }
   .demo { min-height: 500px; }
   .chip-coin .up { display: none; }
   .post { padding: 14px; }

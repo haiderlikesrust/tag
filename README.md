@@ -33,6 +33,8 @@ npm run build
 
 Use `npm run watch` while developing. It rebuilds `src/` on change; re-run `npm run build` after editing `static/`. Then click reload on the extension card and refresh x.com.
 
+**Publishing:** `npm run package` builds and writes `release/hypertag-<version>.zip` for the Chrome Web Store. Raise `version` in `static/manifest.json` before each upload. Paste-ready listing text, permission justifications and data-use answers are in [store/listing.md](store/listing.md), and the privacy policy is live at https://hypertag.trade/privacy.
+
 ## Connecting your account
 
 You can connect in one of two ways. Either way, the extension only holds an **API (agent) wallet**. Hyperliquid lets agent wallets place and cancel orders, but **never withdraw or transfer funds**.
@@ -106,7 +108,9 @@ src/content/      x.com UI: chips, trade sheet, sidebar card, connect dialog, wa
 src/popup/        popup script
 static/           manifest, popup HTML/CSS, icons
 assets/           source logo and share image; `npm run icons` renders static/icons/ and the site images
-site/             hypertag.trade landing page + its nginx Dockerfile
+site/             hypertag.trade landing page, privacy policy and nginx Dockerfile
+store/            Chrome Web Store listing text and privacy answers
+scripts/          build, icon rendering and store packaging
 ```
 
 ## Limitations

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Hypertag</title>
+  <meta name="description" content="How the Hypertag browser extension and hypertag.trade handle your data: what stays on your device, what is sent to Hyperliquid, and what is never collected.">
+  <link rel="canonical" href="https://hypertag.trade/privacy">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-pill">
+      <a class="brand" href="/" aria-label="Hypertag home">
+        <img src="/assets/logo.png" width="30" height="30" alt="">
+        <span>Hypertag</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <span class="nav-blob" aria-hidden="true"></span>
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#security">Security</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-mint btn-sm nav-cta" data-cta href="/#get">Add to Chrome</a>
+    </div>
+  </header>
+
+  <main id="main" class="doc">
+    <article class="wrap doc-inner">
+      <p class="kicker">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="doc-meta">Effective October 29, 2026</p>
+
+      <div class="tldr">
+        <h2>The short version</h2>
+        <ul>
+          <li>Hypertag has no accounts, no analytics, no ads and no servers of its own that receive your data.</li>
+          <li>Your trading key and settings stay in your browser.</li>
+          <li>The only service Hypertag sends data to is Hyperliquid, to show your account and to place the orders you confirm.</li>
+        </ul>
+      </div>
+
+      <p>This policy covers the Hypertag browser extension (“the extension”) and the website at hypertag.trade (“the site”). Hypertag is an independent tool and is not affiliated with X Corp. or Hyperliquid.</p>
+
+      <h2>Information stored on your device</h2>
+      <p>The extension saves the following in your browser's extension storage, on your computer only:</p>
+      <ul>
+        <li>Your Hyperliquid account address.</li>
+        <li>The address and private key of the Hypertag API wallet (“trading key”) that you approve with your wallet or import yourself.</li>
+        <li>Your settings: network (Mainnet or Testnet), default order size, default leverage, slippage and display options.</li>
+        <li>Your X display theme and accent color, so the extension's popup can match them.</li>
+        <li>While you are connecting, a short-lived record of the pending approval, which is deleted when the connection finishes or the browser closes.</li>
+      </ul>
+      <p>The trading key never leaves your device. It is used only inside the extension to sign the actions you confirm. It is stored without a password, so anyone with access to your Chrome profile could use it to trade with your account. A Hyperliquid API wallet can never withdraw or transfer funds.</p>
+
+      <h2>Information sent to Hyperliquid</h2>
+      <p>The extension talks directly to Hyperliquid's public API (<span class="mono">api.hyperliquid.xyz</span>, or <span class="mono">api.hyperliquid-testnet.xyz</span> when Testnet is selected). It sends:</p>
+      <ul>
+        <li>your account address, to load your balance, positions and available margin, plus requests for public market data such as prices;</li>
+        <li>signed instructions you confirm: approving the trading key, changing leverage, and placing or closing orders.</li>
+      </ul>
+      <p>Hyperliquid handles this information under its own terms and privacy practices. Trading activity on Hyperliquid is recorded on its public blockchain and can be seen by anyone.</p>
+
+      <h2>Information read on x.com</h2>
+      <p>To find $cashtags, the extension reads the text of posts shown on your screen on x.com and twitter.com, and the page's colors to match your theme. This happens on your device. Post text is not stored and is not sent anywhere. The extension does not read your direct messages, your X account details, or pages on any other website.</p>
+
+      <h2>Your browser wallet</h2>
+      <p>Only when you click Connect, the extension asks your browser wallet (for example MetaMask or Rabby) for your address, its current network, and one signature approving the trading key. It never asks your wallet to send a transaction or move funds.</p>
+
+      <h2>What we never do</h2>
+      <ul>
+        <li>Sell, rent or share your data with anyone.</li>
+        <li>Use analytics, tracking pixels, fingerprinting or advertising.</li>
+        <li>Send your data anywhere other than Hyperliquid as described above.</li>
+        <li>Use your data to determine creditworthiness or for lending.</li>
+        <li>Use your data for any purpose other than the extension's single purpose: trading on Hyperliquid from X.</li>
+      </ul>
+
+      <h2>The website</h2>
+      <p>hypertag.trade is a static site. It sets no cookies and loads no analytics or third-party scripts. Like most web servers, it may keep standard access logs (IP address, time, page requested and browser type) for a limited time for security and troubleshooting. These logs are not used to identify or track you.</p>
+
+      <h2>Deleting your data</h2>
+      <ul>
+        <li>Click <strong>Disconnect</strong> in the extension popup to delete the trading key and account address for the selected network.</li>
+        <li>Remove the extension from Chrome to delete everything it stored.</li>
+        <li>Revoke the trading key on Hyperliquid at any time, under API settings at <a href="https://app.hyperliquid.xyz/API" rel="noopener noreferrer">app.hyperliquid.xyz/API</a>.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Hypertag is a trading tool and is not intended for anyone under 18.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions or requests: open an issue at <a href="https://github.com/haiderlikesrust/tag/issues" rel="noopener noreferrer">github.com/haiderlikesrust/tag/issues</a>.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" width="28" height="28" alt="">
+        <b>Hypertag</b>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <p class="legal">Hypertag is an independent tool and is not affiliated with, endorsed by or sponsored by X Corp. or Hyperliquid. Trading perpetual futures with leverage is high risk and can result in losing more than you expect. Nothing on this site is financial advice.</p>
+      <p class="copy">© <span data-year>2026</span> Hypertag</p>
+    </div>
+  </footer>
+</body>
+</html>
